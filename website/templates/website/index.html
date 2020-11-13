@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172437564-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+  		gtag('config', 'UA-172437564-3');
+	</script>
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="State of Art is an initiative taken by the College Union in the effort to foster a college driven by creativity that provides the opportunity for everyone to engage in diverse arts and culture | College Of Engineering, Trivandrum | arts | artists | CET |">
+    <meta name="keywords" content="State of art, ART, SOACET, CET, artists, best arts">
+    <meta name="author" content="Rahul T">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/works.css' %}">
+    <title>SOA - State Of Art | CET</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="brand-name">
+                    <a href="#home">SOA CET</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#book-an-art">Book An Art</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Start End-->
+    
+    <style>
+        #spinner{
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loader {
+            border: 10px solid #000000;
+            border-radius: 50%;
+            border-top: 10px solid #3498db;
+            width: 80px;
+            height: 80px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        #thankyou{
+            position: fixed;
+            z-index: 1000;
+            background-color: rgb(140, 187, 70);
+            color: rgb(11, 61, 11);
+            padding: 10px 25px;
+            border-radius: 5px;
+            width: 100%;
+
+        }
+        #thankyou h1{
+            font-size: 2em;
+        }
+
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <div id="spinner">
+       <div class="loader"></div>
+    </div>
+   
+
+    {% if name %}
+    <div id="thankyou">
+        <h1>Thank you {{name}}, We will get in touch with you as soon as possible</h1>
+    </div>
+    {% endif %}
+
+    <script>
+        setTimeout(() => {
+            document.querySelector("#thankyou").style.display = 'none'
+        }, 6000);
+    </script>
+
+    <!-- Home Section Start  -->
+    <section class="home-section" id="home">
+        <!-- Shape -->
+        <div class="shape-01">
+
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-content">
+                    <h4>We are Artists</h4>
+                    <h1>STATE OF ART</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll down -->
+        <a href="#about" class="scroll-down">
+            <img src="{% static 'img/icons/arrow-down.svg' %}" alt="Scroll Down">
+        </a>
+    </section>
+    <!-- Home Section End  -->
+
+    <!-- About Section  -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box">
+                        <div class="shape-02">
+
+                        </div>
+                        <img src="{% static 'img/15.jpg' %}" alt="about-us">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="row">
+                        <div class="section-title">
+                            <h1>About Us</h1>
+                        </div>
+                    </div>
+                    <p>
+                        State of Art is an initiative taken by the College Union in the effort to foster 
+                        a college driven by creativity that provides the opportunity for everyone to engage 
+                        in diverse arts and culture. We believe that great artisanship inspires us, brings us 
+                        together and teaches about ourselves and the world around us.
+                        <br>
+                        <br>
+                        The primary vision of the gallery is to procure, propose & promote an exclusive 
+                        range of Contemporary Art, Modern Art and all other genres of Painting by exploring 
+                        and evaluating artists. This online gallery showcases some of the finest collections of 
+                        arts, crafts and painting of our eminent art experts
+                    </p>
+                    <!-- contact button -->
+                    <a href="#book-an-art" class="btn btn-01">Book An ART</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="about-section" style="background-color: #999999;">
+        <div class="container">
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box">
+                        <img src="{% static 'img/15.jpg' %}" alt="about-us">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="row">
+                        <div class="section-title">
+                            <h1>About Us</h1>
+                        </div>
+                    </div>
+                    <p>
+                        State of Art is an initiative taken by the College Union in the effort to foster 
+                        a college driven by creativity that provides the opportunity for everyone to engage 
+                        in diverse arts and culture. We believe that great artisanship inspires us, brings us 
+                        together and teaches about ourselves and the world around us.
+                        <br>
+                        <br>
+                        The primary vision of the gallery is to procure, propose & promote an exclusive 
+                        range of Contemporary Art, Modern Art and all other genres of Painting by exploring 
+                        and evaluating artists. This online gallery showcases some of the finest collections of 
+                        arts, crafts and painting of our eminent art experts
+                    </p>
+                    <div class="stats">
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- About Section  End-->
+
+    <!-- Artists slider -->
+    {% include 'website/slider.html' %}
+    <!-- Artists slider end -->
+
+    <!-- Works Section -->
+    {% include 'website/works.html' %}
+    <!-- Artists Section End -->
+        
+     <!-- Contact SEction  -->
+     <section class="contact section" id="book-an-art">
+        <div class="container">
+            <div class="row">
+                <div class="section-title padd-15">
+                    <h1>Book An Art</h1>
+                </div>
+            </div>
+            <div class="row">
+                <p>Fill this form if you want to book an art or want to know more about it. Don't hesitate just sent it. We will get to you as soon as possible</p>
+            </div>
+            <!-- Contact Form  -->
+            <div class="row">
+                <form class="contact-form padd-15" action="{% url 'index' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-item col-6">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Name*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-item col-6">
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-item col-6">
+                            <div class="form-group">
+                                <input type="number" name="phone" class="form-control" placeholder="Mobile Number*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-item col-12">
+                            <div class="form-group">
+                                <select name="artist" id="select">
+                                    <option value="---">Select Artist</option>
+                                    {% for artist in artists%}
+                                        <option value="{{artist.email}}">{{artist.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 padd-15">
+                            <input type="submit" id="book" class="btn" value="Book The ART"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- Contact Section End  -->
+    
+    
+<script>
+    document.querySelector('form').addEventListener('submit', e => {
+        document.querySelector('#spinner').style.display = 'flex'
+    });
+</script>
+
+    <!-- copyright -->
+    <div class="copyright-text">
+        <a href="https://instagram.com/state_of__art"><i class="fa fa-instagram"></i></a> &nbsp;&nbsp;
+        <a href=""><i class="fa fa-facebook"></i></a> <br>
+        &copy; 2020 SOACET <br>
+	<p>Designed and Developed by <a href="https://rahulmanoj.xyz">Rahul T <img width=18px style="border-radius: 50%;" src="{% static 'img/pro.jpg' %}" alt='a'></a></p>
+        <a href="#home"><i class="fa fa-arrow-up side"></i>
+        </div></a>
+    
+
+<script src="{% static 'js/jQuery.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

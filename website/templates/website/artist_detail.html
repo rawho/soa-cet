@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{artist.name}} is an artist of State of Art club of College of Engineering, Trivandrum , Which is an initiative by college union. Contact {{artist.name}} at {{artist.email}} of {{artist.email}} | SOACET">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/artist_detail.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Soa | {{artist.name}}</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172437564-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+      gtag('config', 'UA-172437564-3');
+</script>
+
+
+</head>
+<body>
+
+    <style>
+        body{
+            font-family: sans-serif!important;
+        }
+    </style>
+  <!-- Main Container -->
+<div class="main-container">
+  <!-- Main Content -->
+  <div class="main-content">
+        <!-- Home Section  -->
+        <section class="home section active" id="home">
+          <div class="container">
+              <div class="intro">
+                  <img src="{{ artist.dp.url }}" alt="Profile" class="shadow-dark">
+                  <h1>{{ artist.name }}</h1>
+                  <p>{{ artist.email }}</p>
+                  <p>{{ artist.phone }}</p>
+                  <p>{{ artist.branch }}</p>
+                  <p>{{ artist.semester }}</p>
+                  <div class="social-links">
+                      <a href="{{ artist.instagram }}"><i class="fa fa-instagram"></i></a> 
+                      <a href="{{ artist.facebook }}"><i class="fa fa-facebook"></i></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Home section End -->
+      <!-- Portfolio Section -->
+      <section class="portfolio section" id="portfolio">
+          <div class="container">
+              <div class="row">
+                  <div class="section-title padd-15">
+                      <h1>Works</h1>
+                  </div>
+              </div>
+              <div class="row">
+                  <!-- Portfolio Item  -->
+                  {% for image in images reversed %}
+                  <div class="portfolio-item padd-15" data-category="web-design">
+                      <div class="portfolio-item-inner shadow-dark">
+                          <div class="portfolio-img">
+                              <img src="{{ image.work.url }}" alt="portfolio">
+                          </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+                  <!-- Portfolio Item End -->
+                  
+              </div>
+          </div>
+      </section>
+
+      <!-- Portfolio Section End-->
+  </div>
+  <!-- Main Content End -->
+</div>
+<!-- Main Container -->
+<!-- copyright -->
+<div class="copyright-text">
+    <a href="https://instagram.com/state_of__art"><i class="fa fa-instagram"></i></a> &nbsp;&nbsp;
+    <a href=""><i class="fa fa-facebook"></i></a> <br>
+    &copy; 2020 SOACET <br>
+<p>Designed and Developed by <a href="https://rahulmanoj.xyz">Rahul T <img width=18px style="border-radius: 50%;" src="{% static 'img/pro.jpg' %}" alt='a'></a></p>
+    <a href="#home"><i class="fa fa-arrow-up side"></i>
+    </div></a>
+</body>
+</html>

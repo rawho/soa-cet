@@ -1,0 +1,70 @@
+{% load static %}
+
+
+<!-- Mobile View  -->
+
+<section class="work section hidden1" id="works">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h1>Works</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blog Item  -->
+            {% for artist in artists %}
+            <div class="work-item padd-15">
+                <div class="work-item-inner shadow-dark">
+                    <a href="{% url 'artist_detail' artist.id artist.slug %}">
+                        <div class="work-img">
+                            <img src="{{ artist.fav_art.url }}" alt="profile pic">
+                        </div>
+                        <div class="work-info">
+                            <h4 class="work-title">{{ artist.name }}</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- Blog Item End -->
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- Laptop view -->
+
+<section class="portfolio section hidden" id="works">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                <h1>Works</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Portfolio Item  -->
+            {% for artist in artists %}
+            <div class="portfolio-item padd-15" data-category="web-design">
+                <div class="portfolio-item-inner shadow-dark">
+                    <a href="{% url 'artist_detail' artist.id artist.slug %}">
+                        <div class="portfolio-img">
+                            <img src="{{ artist.fav_art.url }}" alt="portfolio">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>{{ artist.name }} </h4>
+                            <div class="icon">
+                                <img src="{{ artist.dp.url }}" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- Portfolio Item End -->
+            
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section End-->
