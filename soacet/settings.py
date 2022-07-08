@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
-from decouple import config
+# import django_heroku
+# from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -143,4 +143,3 @@ EMAIL_HOST_USER = os.environ.get('email_username')
 EMAIL_HOST_PASSWORD = os.environ.get('email_password')
 EMAIL_USE_TLS = True
 
-django_heroku.settings(locals())
