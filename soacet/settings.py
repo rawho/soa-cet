@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import cloudinary
+import cloudinary_storage
 # import django_heroku
 # from decouple import config
 
@@ -39,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+    'website',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -117,6 +121,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dpurlepvo",
+    'API_KEY': "286884958881159",
+    'API_SECRET': "GinvzLTuaNI9pVKh1IoRg6tSVhY",
+}
+
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
