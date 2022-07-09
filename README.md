@@ -8,4 +8,4 @@ State of Art is an initiative taken by the College Union in the effort to foster
 
 The primary vision of the gallery is to procure, propose & promote an exclusive range of Contemporary Art, Modern Art and all other genres of Painting by exploring and evaluating artists. This online gallery showcases some of the finest collections of arts, crafts and painting of our eminent art experts
 
-Take a look at the website : [soacet.in](https://soacet.in)
+Take a look at the website : [soacet.rahult.in](http://soacet.rahult.in)
