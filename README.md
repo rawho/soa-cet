@@ -1,4 +1,4 @@
-[![Website](https://img.shields.io/website?down_color=red&down_message=down&style=flat-square&up_color=green&up_message=Up&url=https%3A%2F%2Fsoacet.in)](http://soacet.rahult.in)
+[![Website](https://img.shields.io/website?down_color=red&down_message=down&style=flat-square&up_color=green&up_message=Up&url=http%3A%2F%2Fsoacet.rahult.in)](http://soacet.rahult.in)
 
 ![soacet](soacet.png)
 
